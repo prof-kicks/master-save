@@ -7,6 +7,12 @@ import time
 import os
 import threading
 import json
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is up..."
 
 with open('config.json', 'r') as f: DATA = json.load(f)
 def getenv(var): return os.environ.get(var) or DATA.get(var, None)
@@ -279,4 +285,5 @@ __note that space in between doesn't matter__
 
 
 # infinty polling
+app.run(host='0.0.0.0', port=3000)
 bot.run()

@@ -285,5 +285,6 @@ __note that space in between doesn't matter__
 
 
 # infinty polling
-app.run(host='0.0.0.0', port=3000)
 bot.run()
+app.run(host='0.0.0.0', port=3000)
+
